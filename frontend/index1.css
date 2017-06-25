@@ -1,0 +1,35 @@
+#tab1 {
+    background-image: url("nyctrain.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+  
+.flex-100 {
+	height: 100vh; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* label color */
+   .input-field label {
+     color: block;
+     font-style: bold;
+     font-size: 18px;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #000;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
