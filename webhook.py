@@ -3,6 +3,7 @@ from flask import Blueprint, render_template, request, session, redirect
 
 from twilio_client import send_sms, call_num
 import json
+import urllib
 
 webhook = Blueprint("webhook", __name__, template_folder="templates", static_folder="static")
 
@@ -16,8 +17,12 @@ def _webhook():
     if request.method == "POST":
         data = request.get_json()
         msg = data['msg']
+
+        message = urllib.quote(msg, safe='')
+       
+
         num = data['num']
 
-        call_num(num,msg)
+        call_num(num,message)
 
     

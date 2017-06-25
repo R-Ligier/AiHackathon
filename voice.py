@@ -6,8 +6,9 @@ voice = Blueprint("voice", __name__, template_folder="templates", static_folder=
 
 @voice.route("/voice/", methods=['GET', 'POST'])
 def _voice():
+    msg = request.args.get("msg")
     response = VoiceResponse()
-    response.say('fuck you too', voice='alice', language='en')
+    response.say(msg, voice='alice', language='en')
 
     print(response)
     return str(response)

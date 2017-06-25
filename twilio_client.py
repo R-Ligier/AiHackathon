@@ -13,7 +13,6 @@ def send_sms(num,msg):
     body=msg)
 
 def call_num(num,msg):
-
     client.calls.create(to="+1"+num,
                            from_="+19172318588",
-                           url="http://40.71.189.185:5000/voice/?msg="+msg)
+                           url="https://hack.scribbl.es/voice/?msg="+msg)

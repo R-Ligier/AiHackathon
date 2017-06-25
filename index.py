@@ -5,5 +5,5 @@ index = Blueprint("index", __name__, template_folder="templates", static_folder=
 
 @index.route("/", methods=['GET', 'POST'])
 def _index():
-    return '0' 
+    return render_template("index.html")
 
